@@ -9,28 +9,23 @@ public class BankAccount {
         this.balance = initialBalance;
     }
 
-    public boolean withdraw(double amount) {
+    public void withdraw(double amount) {
         if (amount <= 0) {
             System.out.println("Withdrawal amount must be positive.");
-            return false;
         } else if (amount > balance) {
             System.out.println("Insufficient balance.");
-            return false;
         } else {
             balance -= amount;
             System.out.println("Withdrawn: ₹" + amount);
-            return true;
         }
     }
 
-    public boolean deposit(double amount) {
+    public void deposit(double amount) {
         if (amount <= 0) {
             System.out.println("Deposit amount must be positive.");
-            return false;
         } else {
             balance += amount;
             System.out.println("Deposited: ₹" + amount);
-            return true;
         }
     }
 
